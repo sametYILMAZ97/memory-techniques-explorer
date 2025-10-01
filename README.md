@@ -12,14 +12,6 @@ An interactive web application to learn and practice proven memory enhancement t
 - **Educational Content**: Step-by-step guides and real-world examples for each technique
 - **Mobile-Friendly**: Works seamlessly across all devices
 
-## 🚀 Demo
-
-[Live Demo](#) _(Add your deployment link here)_
-
-## 📸 Screenshots
-
-_Add screenshots of your application here_
-
 ## 🛠️ Tech Stack
 
 - **React** - UI framework
@@ -138,8 +130,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Inspired by the work of memory champions and researchers
 
 ## 📧 Contact
-
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - your.email@example.com
 
 Project Link: [https://github.com/sametYILMAZ97/memory-techniques-explorer](https://github.com/sametYILMAZ97/memory-techniques-explorer)
 
