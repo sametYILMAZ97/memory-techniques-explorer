@@ -1,173 +1,106 @@
-export const memoryTechniques = [
+import { MapPin, Package, Link2, Clock, Type, Eye } from 'lucide-react';
+
+export const techniques = [
   {
-    id: 1,
-    name: "Method of Loci (Memory Palace)",
-    category: "Spatial Memory",
-    difficulty: "Intermediate",
-    description: "A mnemonic device that relies on spatial memory to recall information. You mentally place items you want to remember in specific locations within an imaginary place.",
-    howToUse: [
-      "Choose a familiar place (your home, a route you walk often)",
-      "Identify specific locations or 'loci' within that place",
-      "Create vivid mental images of the items you want to remember",
-      "Place these images at each location",
-      "To recall, mentally walk through your palace and 'see' the items"
+    id: 'memory-palace',
+    name: 'Memory Palace',
+    icon: MapPin,
+    color: 'bg-gradient-to-br from-purple-500 to-pink-500',
+    description: 'Visualize a familiar place and mentally place information in specific locations within it.',
+    howTo: [
+      'Choose a familiar location (your home, a route you know well)',
+      'Identify specific spots or landmarks in that location',
+      'Create vivid mental images of what you want to remember',
+      'Place each image at a specific spot',
+      'Walk through your memory palace to recall information'
     ],
-    benefits: [
-      "Highly effective for memorizing lists and sequences",
-      "Works for both short-term and long-term memory",
-      "Can be reused for different sets of information"
-    ],
-    bestFor: "Memorizing speeches, lists, or sequences of information"
+    example: 'To remember a grocery list: milk at the door, bread on the stairs, eggs in the living room, etc.',
+    practice: 'Try memorizing these items: keys, wallet, phone, sunglasses, water bottle',
+    realWorld: 'Used by memory champions to memorize decks of cards and long sequences of numbers'
   },
   {
-    id: 2,
-    name: "Chunking",
-    category: "Organization",
-    difficulty: "Beginner",
-    description: "Breaking down large pieces of information into smaller, manageable 'chunks' that are easier to remember.",
-    howToUse: [
-      "Identify patterns or groups within the information",
-      "Break the information into smaller segments (typically 3-5 items per chunk)",
-      "Find meaningful connections between items in each chunk",
-      "Practice recalling one chunk at a time"
+    id: 'chunking',
+    name: 'Chunking',
+    icon: Package,
+    color: 'bg-gradient-to-br from-blue-500 to-cyan-500',
+    description: 'Break down large pieces of information into smaller, manageable chunks.',
+    howTo: [
+      'Identify patterns or groups within the information',
+      'Break information into smaller segments (typically 3-5 items)',
+      'Find meaningful connections between items in each chunk',
+      'Practice recalling one chunk at a time',
+      'Gradually combine chunks as they become familiar'
     ],
-    benefits: [
-      "Reduces cognitive load",
-      "Makes complex information more digestible",
-      "Improves working memory capacity"
-    ],
-    bestFor: "Phone numbers, passwords, long strings of data"
+    example: 'Phone number: Instead of 5551234567, remember it as 555-123-4567 or (555) 123-4567',
+    practice: 'Memorize this number using chunking: 9876543210',
+    realWorld: 'Credit card numbers, social security numbers, long passwords'
   },
   {
-    id: 3,
-    name: "Spaced Repetition",
-    category: "Learning Strategy",
-    difficulty: "Beginner",
-    description: "A learning technique that involves reviewing information at increasing intervals over time to strengthen memory retention.",
-    howToUse: [
-      "Learn the material initially",
-      "Review after 1 day",
-      "Review after 3 days",
-      "Review after 1 week",
-      "Continue increasing intervals (2 weeks, 1 month, etc.)"
+    id: 'linking',
+    name: 'Linking Method',
+    icon: Link2,
+    color: 'bg-gradient-to-br from-green-500 to-emerald-500',
+    description: 'Create a vivid story that links items together in a memorable chain.',
+    howTo: [
+      'Take the first two items you need to remember',
+      'Create a vivid, unusual image linking them together',
+      'Link the second item to the third with another image',
+      'Continue creating links until all items are connected',
+      'Make the links bizarre, funny, or emotionally charged'
     ],
-    benefits: [
-      "Combats the forgetting curve",
-      "Maximizes long-term retention",
-      "Time-efficient learning method"
-    ],
-    bestFor: "Language learning, exam preparation, vocabulary building"
+    example: 'Shopping list (eggs, milk, bread): Imagine an egg cracking and pouring milk, which splashes onto bread',
+    practice: 'Create a story linking: dog, umbrella, coffee, book',
+    realWorld: 'Remembering speeches, presentations, or sequences of events'
   },
   {
-    id: 4,
-    name: "Acronyms and Acrostics",
-    category: "Verbal Memory",
-    difficulty: "Beginner",
-    description: "Creating words or phrases where each letter represents another word or concept you want to remember.",
-    howToUse: [
-      "List the items you need to remember",
-      "Take the first letter of each item",
-      "Create a memorable word (acronym) or sentence (acrostic) using these letters",
-      "Practice recalling the acronym/acrostic and what each letter represents"
+    id: 'spaced-repetition',
+    name: 'Spaced Repetition',
+    icon: Clock,
+    color: 'bg-gradient-to-br from-orange-500 to-red-500',
+    description: 'Review information at increasing intervals for long-term retention.',
+    howTo: [
+      'Learn the material initially',
+      'Review after 1 day',
+      'Review after 3 days',
+      'Review after 1 week',
+      'Continue increasing intervals (2 weeks, 1 month, etc.)'
     ],
-    benefits: [
-      "Quick and easy to create",
-      "Works well for ordered lists",
-      "Particularly effective for educational content"
-    ],
-    bestFor: "Memorizing ordered lists, categories, or steps in a process"
+    example: 'Learning vocabulary: Review new words after 1 day, 3 days, 1 week, 2 weeks, 1 month',
+    practice: 'Set up a study schedule for your next exam using spaced intervals',
+    realWorld: 'Language learning apps (Anki, Duolingo), studying for exams'
   },
   {
-    id: 5,
-    name: "Mind Mapping",
-    category: "Visual Memory",
-    difficulty: "Beginner",
-    description: "A visual technique that organizes information around a central concept, with branches representing related ideas.",
-    howToUse: [
-      "Write the main topic in the center",
-      "Draw branches for major subtopics",
-      "Add smaller branches for details",
-      "Use colors, images, and symbols to enhance memory",
-      "Review and recreate the map from memory"
+    id: 'acronyms',
+    name: 'Acronyms & Mnemonics',
+    icon: Type,
+    color: 'bg-gradient-to-br from-indigo-500 to-purple-500',
+    description: 'Use first letters to create memorable words or phrases.',
+    howTo: [
+      'List the items you need to remember',
+      'Take the first letter of each item',
+      'Create a word (acronym) or sentence (mnemonic) using these letters',
+      'Make it memorable and easy to recall',
+      'Practice recalling the acronym and what each letter represents'
     ],
-    benefits: [
-      "Engages both visual and logical thinking",
-      "Shows relationships between concepts",
-      "Encourages creative thinking"
-    ],
-    bestFor: "Note-taking, brainstorming, studying complex topics"
+    example: 'HOMES for the Great Lakes: Huron, Ontario, Michigan, Erie, Superior',
+    practice: 'Create an acronym for: North, East, South, West',
+    realWorld: 'Medical terminology (RICE for Rest, Ice, Compression, Elevation), music (FACE, Every Good Boy Does Fine)'
   },
   {
-    id: 6,
-    name: "Peg System",
-    category: "Association",
-    difficulty: "Advanced",
-    description: "A mnemonic technique that associates numbers with words that rhyme with or resemble the numbers, creating 'pegs' to hang memories on.",
-    howToUse: [
-      "Learn the basic peg words (1=bun, 2=shoe, 3=tree, etc.)",
-      "Create vivid mental images linking your information to peg words",
-      "Use the number to recall the peg word, which triggers the associated memory",
-      "Practice regularly to strengthen associations"
+    id: 'visualization',
+    name: 'Vivid Visualization',
+    icon: Eye,
+    color: 'bg-gradient-to-br from-pink-500 to-rose-500',
+    description: 'Create multi-sensory mental images to enhance memory retention.',
+    howTo: [
+      'Close your eyes and create a mental image',
+      'Add color, movement, and exaggeration',
+      'Include multiple senses (sight, sound, smell, touch, taste)',
+      'Make it bizarre, funny, or emotionally striking',
+      'The more vivid and unusual, the more memorable'
     ],
-    benefits: [
-      "Excellent for remembering numbered lists",
-      "Provides a permanent framework for memorization",
-      "Can memorize items in any order"
-    ],
-    bestFor: "Numbered lists, presentations, remembering items by their position"
-  },
-  {
-    id: 7,
-    name: "Story Method",
-    category: "Narrative Memory",
-    difficulty: "Intermediate",
-    description: "Creating a narrative or story that links together the items you want to remember in a memorable sequence.",
-    howToUse: [
-      "List the items you need to remember",
-      "Create a story that includes all items in sequence",
-      "Make the story unusual, vivid, or humorous",
-      "The more bizarre or emotional, the better",
-      "Practice telling the story to reinforce memory"
-    ],
-    benefits: [
-      "Leverages natural narrative memory",
-      "Makes abstract information concrete",
-      "Engaging and enjoyable to use"
-    ],
-    bestFor: "Lists, sequences, connecting unrelated items"
-  },
-  {
-    id: 8,
-    name: "Major System",
-    category: "Number Memory",
-    difficulty: "Advanced",
-    description: "A phonetic number system that converts numbers into consonant sounds, then into words, making numbers easier to remember.",
-    howToUse: [
-      "Learn the number-sound associations (0=s/z, 1=t/d, 2=n, etc.)",
-      "Convert numbers to consonant sounds",
-      "Add vowels to create memorable words",
-      "Create images or stories with these words",
-      "Convert back to numbers when needed"
-    ],
-    benefits: [
-      "Transform abstract numbers into concrete images",
-      "Remember long sequences of numbers",
-      "Widely used by memory champions"
-    ],
-    bestFor: "Phone numbers, dates, mathematical constants, credit card numbers"
+    example: 'To remember "apple": Imagine a giant, bright red apple the size of a house, with a sweet smell',
+    practice: 'Visualize your own name in a creative, memorable way',
+    realWorld: 'Remembering names and faces, studying for visual subjects'
   }
 ];
-
-export const categories = [
-  "All",
-  "Spatial Memory",
-  "Organization",
-  "Learning Strategy",
-  "Verbal Memory",
-  "Visual Memory",
-  "Association",
-  "Narrative Memory",
-  "Number Memory"
-];
-
-export const difficulties = ["All", "Beginner", "Intermediate", "Advanced"];

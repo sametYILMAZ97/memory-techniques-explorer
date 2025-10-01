@@ -1,73 +1,20 @@
-import { useState } from 'react';
-import './TechniqueCard.css';
+import React from 'react';
 
-function TechniqueCard({ technique }) {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const getDifficultyColor = (difficulty) => {
-    switch (difficulty) {
-      case 'Beginner':
-        return '#10b981';
-      case 'Intermediate':
-        return '#f59e0b';
-      case 'Advanced':
-        return '#ef4444';
-      default:
-        return '#6b7280';
-    }
-  };
+const TechniqueCard = ({ technique, onClick }) => {
+  const Icon = technique.icon;
 
   return (
-    <div className="technique-card">
-      <div className="card-header">
-        <h3 className="technique-name">{technique.name}</h3>
-        <div className="badges">
-          <span 
-            className="badge difficulty-badge"
-            style={{ backgroundColor: getDifficultyColor(technique.difficulty) }}
-          >
-            {technique.difficulty}
-          </span>
-          <span className="badge category-badge">{technique.category}</span>
-        </div>
+    <div
+      onClick={onClick}
+      className={`${technique.color} border-2 rounded-xl p-6 cursor-pointer hover:shadow-lg transition-all hover:scale-105`}
+    >
+      <div className="flex items-center gap-3 mb-4">
+        <Icon className="w-8 h-8 text-white" />
+        <h3 className="text-2xl font-bold text-white">{technique.name}</h3>
       </div>
-
-      <p className="description">{technique.description}</p>
-
-      <div className="best-for">
-        <strong>Best for:</strong> {technique.bestFor}
-      </div>
-
-      <button 
-        className="expand-button"
-        onClick={() => setIsExpanded(!isExpanded)}
-      >
-        {isExpanded ? 'Show Less ▲' : 'Learn More ▼'}
-      </button>
-
-      {isExpanded && (
-        <div className="expanded-content">
-          <div className="section">
-            <h4>How to Use:</h4>
-            <ol>
-              {technique.howToUse.map((step, index) => (
-                <li key={index}>{step}</li>
-              ))}
-            </ol>
-          </div>
-
-          <div className="section">
-            <h4>Benefits:</h4>
-            <ul>
-              {technique.benefits.map((benefit, index) => (
-                <li key={index}>{benefit}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      )}
+      <p className="text-white/90 leading-relaxed">{technique.description}</p>
     </div>
   );
-}
+};
 
 export default TechniqueCard;
